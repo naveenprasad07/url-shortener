@@ -1,3 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+
+  --color-navbar: #ffffff;
+  --color-link: #2a5bd7;
+
+  --box-shadow-custom: 0 0 15px rgba(0, 0, 0, 0.3);
+  --box-shadow-right: 10px 0px 10px -5px rgba(0, 0, 0, 0.3);
+
+  --font-roboto: "Roboto", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@layer base {
+    :root {
+      --color-btn: #3364F7;
+      --box-shadow-custom: 0 0 15px rgba(0, 0, 0, 0.3);
+      --box-shadow-right: 10px 0px 10px -5px rgba(0, 0, 0, 0.3);
+
+      --custom-gradient: linear-gradient(to right, #3b82f6, #9333ea); /* from-blue-500 to-purple-600 */
+      --custom-gradient-2: linear-gradient(to left, #3b82f6, #f43f5e);
+      --card-gradient: linear-gradient(to right, #38b2ac, #4299e1);
+    }
+    /* Tailwind-compatible gradient classes */
+    .bg-custom-gradient {
+      background: var(--custom-gradient);
+    }
+    .bg-custom-gradient-2 {
+      background: var(--custom-gradient-2);
+    }
+    .bg-card-gradient {
+      background: var(--card-gradient);
+    }
+    .text-btnColor{
+      color:var(--color-btn);
+    }
+  }
