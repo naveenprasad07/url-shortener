@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import React from "react";
 import { motion } from "framer-motion";
 
 import Card from "./Card";
@@ -9,8 +10,8 @@ let desc =
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  // const { token } = useStoreContext();
-  // console.log("TOKEN FROM LANDING PAGE: " + token);
+  const { token } = useStoreContext();
+  console.log("TOKEN FROM LANDING PAGE: " + token);
 
   const dashBoardNavigateHandler = () => {
 
@@ -76,7 +77,7 @@ const LandingPage = () => {
             transition={{ duration: 0.8 }}
             className="sm:w-[480px] w-[400px] object-cover rounded-md"
             src="/images/img2.png"
-            alt="Logo of our website"
+            alt=""
           />
         </div>
       </div>

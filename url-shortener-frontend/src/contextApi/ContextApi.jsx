@@ -9,8 +9,6 @@ export const ContextProvider = ({ children }) => {
 
     const [token, setToken] = useState(getToken);
 
-    console.log(token);
-
     const sendData = {
         token,
         setToken,
